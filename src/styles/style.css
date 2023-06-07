@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Neucha;
+    src: url('../fonts/Neucha-Regular.ttf');
+}
+
 :root {
     --white: #fff;
     --white-transparent: #d7ccc0;
@@ -28,7 +33,9 @@ h1, h2, h3 {
 }
 
 h1 {
+    padding: 55px 0;
     font-size: 72px;
+    float: left;
 }
 
 h2 {
@@ -40,7 +47,64 @@ h3 {
 }
 
 section {
+    position: relative;
     width: 1110px;
-    margin: 100px auto;
+    margin: 0 auto;
 
+}
+
+.main-color {
+    color: var(--main);
+}
+
+.header {
+    position: relative;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.top-header {
+    position: relative;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+}
+
+.header img {
+    position: absolute;
+    height: 525px;
+    top: 55px;
+    right: -270px;
+    z-index: -1;
+}
+
+.description {
+    clear: both;
+    padding: 50px 0;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.flex-item {
+    flex: 1 1 0;
+}
+
+a.button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-weight: bold;
+    color: var(--white);
+    background-color: var(--main);
+    text-decoration: none;
 }
